@@ -3,7 +3,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/site.yml"]
+    paths: ["site/**", "docs/**", "examples/**", ".github/workflows/site.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,8 +22,7 @@ jobs:
       run:
         working-directory: site
     env:
-      NEXT_PUBLIC_BASE_PATH: /wigolo
-      NEXT_PUBLIC_SITE_URL: https://knockoutez.github.io/wigolo
+      NEXT_PUBLIC_SITE_URL: https://wigolo.app
       NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
       # Sponsor click counter. A repo *variable*, not a secret — it ships in the
       # client bundle either way. Leaving it unset is safe: the /go/ hop still

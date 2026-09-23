@@ -4,7 +4,7 @@
 
 Install: `npx wigolo init` (unattended full setup; `--agents=claude-code` wires an agent)
 
-Website: https://knockoutez.github.io/wigolo/
+Website: https://wigolo.app/
 Repository: https://github.com/KnockOutEZ/wigolo
 
 ## Packages

@@ -11,14 +11,14 @@ keep it that way.
 
 ### TestMu AI
 
-<a href="https://knockoutez.github.io/wigolo/go/testmu/?ref=sponsors-page">
+<a href="https://wigolo.app/go/testmu/?ref=sponsors-page">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg">
 <img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" width="240">
 </picture>
 </a>
 
-[TestMu AI](https://knockoutez.github.io/wigolo/go/testmu/?ref=sponsors-page)
+[TestMu AI](https://wigolo.app/go/testmu/?ref=sponsors-page)
 (formerly LambdaTest) is the world's first full-stack agentic AI quality
 engineering platform, trusted by 18,000+ enterprises.
 
@@ -50,7 +50,7 @@ time to answer issues from people running wigolo in production.
 ### What a sponsor gets
 
 - A logo and a one-line description in the **README sponsors section**.
-- The same placement on the **[project website](https://knockoutez.github.io/wigolo/)**
+- The same placement on the **[project website](https://wigolo.app/)**
   and on this page.
 - A link on every placement, with its reach measured — figures available on
   request, see [Measurement](#measurement) below.

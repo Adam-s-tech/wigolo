@@ -122,14 +122,14 @@ describe('hop URLs', () => {
   it('builds an absolute URL for surfaces GitHub serves', () => {
     // A relative link in the README would resolve against github.com and 404,
     // so README links must be absolute.
-    expect(sponsorGoUrl('testmu', 'readme', 'https://knockoutez.github.io/wigolo')).toBe(
-      'https://knockoutez.github.io/wigolo/go/testmu/?ref=readme',
+    expect(sponsorGoUrl('testmu', 'readme', 'https://wigolo.app')).toBe(
+      'https://wigolo.app/go/testmu/?ref=readme',
     );
   });
 
   it('does not double the slash when the site URL has a trailing one', () => {
-    expect(sponsorGoUrl('testmu', 'readme', 'https://knockoutez.github.io/wigolo/')).toBe(
-      'https://knockoutez.github.io/wigolo/go/testmu/?ref=readme',
+    expect(sponsorGoUrl('testmu', 'readme', 'https://wigolo.app/')).toBe(
+      'https://wigolo.app/go/testmu/?ref=readme',
     );
   });
 

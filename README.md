@@ -137,14 +137,14 @@ Thank you to the sponsors below, who help keep wigolo maintained and free for ev
 
 <div align="center">
 
-<a href="https://knockoutez.github.io/wigolo/go/testmu/?ref=readme">
+<a href="https://wigolo.app/go/testmu/?ref=readme">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg">
 <img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" width="240">
 </picture>
 </a>
 
-<sub>**[TestMu AI](https://knockoutez.github.io/wigolo/go/testmu/?ref=readme)** (formerly LambdaTest) is the world's first full-stack agentic AI quality engineering platform, trusted by 18,000+ enterprises.</sub>
+<sub>**[TestMu AI](https://wigolo.app/go/testmu/?ref=readme)** (formerly LambdaTest) is the world's first full-stack agentic AI quality engineering platform, trusted by 18,000+ enterprises.</sub>
 
 </div>
 
@@ -343,7 +343,7 @@ export WIGOLO_EAGER_WARMUP=1                        # pay the ~1s model load up 
 **[docs/](docs/README.md)** — the complete manual:
 [getting started](docs/getting-started.md) · [installation & channels](docs/installation.md) · [configuration](docs/configuration.md) · [tools reference](docs/tools.md) · [CLI & shell](docs/cli.md) · [REST API](docs/rest-api.md) · [SDKs & integrations](docs/sdks.md) · [self-hosting](docs/self-hosting.md) · [agent skills](docs/skills.md) · [plugins](docs/plugins.md) · [troubleshooting & FAQ](docs/troubleshooting.md) · [privacy & security](docs/privacy-security.md)
 
-**[examples/](examples/README.md)** — runnable, each with a README (and most with a terminal recording): one-shot CLI, NDJSON shell pipelines, REST via curl, TypeScript & Python SDKs, Vercel AI SDK tools, pointing self-hosted n8n at a remote wigolo, watch-with-webhook, and writing your own search-engine plugin. The docs are also rendered on the site at **[knockoutez.github.io/wigolo/docs](https://knockoutez.github.io/wigolo/docs/)**.
+**[examples/](examples/README.md)** — runnable, each with a README (and most with a terminal recording): one-shot CLI, NDJSON shell pipelines, REST via curl, TypeScript & Python SDKs, Vercel AI SDK tools, pointing self-hosted n8n at a remote wigolo, watch-with-webhook, and writing your own search-engine plugin. The docs are also rendered on the site at **[wigolo.app/docs](https://wigolo.app/docs/)**.
 
 ## Beta & feedback
 

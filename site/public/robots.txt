@@ -5,4 +5,4 @@ Allow: /
 # count as a click — which would inflate what we report to sponsors.
 Disallow: /go/
 
-Sitemap: https://knockoutez.github.io/wigolo/sitemap.xml
+Sitemap: https://wigolo.app/sitemap.xml
