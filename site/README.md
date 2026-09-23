@@ -17,3 +17,18 @@ Environment (set by the Pages workflow; optional locally):
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | Access key for the quick-feedback form (web3forms.com). Unset → the form hides and only the GitHub links show. |
 
 All `/public` asset references go through `asset()` from `src/lib/site.ts` so they keep working if a base path is ever set. Fonts are open-licensed and self-hosted at build time via `next/font` (Bricolage Grotesque · Instrument Sans · Azeret Mono).
+
+## Logo wall
+
+The "Starred by … developers, including engineers at" section is driven by `src/content/logo-wall/companies.json` — a hand-curated list, nothing is added automatically.
+
+```bash
+npm run logos:mine     # pull stargazers + forks (GitHub GraphQL, needs `gh auth login` or GITHUB_TOKEN)
+                       # → .logo-wall/candidates.json, ranked by people per company (gitignored: holds logins)
+npm run logos:fetch    # download + normalise raster logos into public/logos/, write rasters.json
+npm run logos:check    # verify every entry has a logo (CI runs this before build)
+```
+
+Each entry: `tier` 1 (top row, scrolls left) or 2 (bottom row, scrolls right); `evidence` is `verified` when GitHub attests the link (public org membership, org-owned fork, or a profile email on the company domain) and `self-reported` when it rests on the free-text company field alone; `display` is `icon+name`, `wordmark` (the logo already spells the name) or `name` (text only); `logo.source` is `simple-icons` (inline SVG, preferred), `github-avatar`, `favicon`, `file` (drop a PNG at `.logo-wall/raw-logos/<slug>.png`) or `none`. Rasters are converted to monochrome silhouettes so every logo takes the same treatment. `npm run logos:mine -- --offline` re-ranks the cached pull without calling the API.
+
+Dependencies it adds: `simple-icons` (CC0 brand SVGs, build-time only), `svg-path-bbox` (crops wordmarks to their glyph), and dev-only `pngjs` (raster normalisation) and `vitest` (`npm test`).
