@@ -1,4 +1,5 @@
 import { asset, GH, BASE_PATH, FEEDBACK_LINKS } from "@/lib/site";
+import { ALTERNATIVES } from "@/content/alternatives";
 import styles from "./Footer.module.css";
 
 const COLS: { title: string; links: { label: string; href: string; ext?: boolean }[] }[] = [
@@ -10,6 +11,13 @@ const COLS: { title: string; links: { label: string; href: string; ext?: boolean
       { label: "Parity", href: `${BASE_PATH}/#parity` },
       { label: "Quickstart", href: `${BASE_PATH}/#quickstart` },
       { label: "Feedback", href: `${BASE_PATH}/#feedback` },
+    ],
+  },
+  {
+    title: "Compare",
+    links: [
+      ...ALTERNATIVES.map((a) => ({ label: `${a.name} alternative`, href: `${BASE_PATH}/alternatives/${a.slug}/` })),
+      { label: "All alternatives", href: `${BASE_PATH}/alternatives/` },
     ],
   },
   {

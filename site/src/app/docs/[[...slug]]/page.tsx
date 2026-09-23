@@ -9,7 +9,7 @@ import {
 } from "fumadocs-ui/layouts/docs/page";
 import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
 import { source } from "@/lib/source";
-import { GH } from "@/lib/site";
+import { GH, SOCIAL_IMAGE } from "@/lib/site";
 
 // Static export: every docs page is built; anything else 404s.
 export const dynamicParams = false;
@@ -20,7 +20,6 @@ export function generateStaticParams() {
 
 type Props = { params: Promise<{ slug?: string[] }> };
 
-const SOCIAL_IMAGE = "/wigolo/wigolo-social.png";
 
 /** Where the page's text lives in the repo, for "Edit on GitHub". */
 function repoFile(slugs: string[]): string {
@@ -48,13 +47,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: page.data.title,
       description: page.data.description,
       url,
-      images: [{ url: SOCIAL_IMAGE, width: 1200, height: 630 }],
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: page.data.title,
       description: page.data.description,
-      images: [SOCIAL_IMAGE],
+      images: [SOCIAL_IMAGE.url],
     },
   };
 }

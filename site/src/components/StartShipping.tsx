@@ -8,6 +8,10 @@ export default function StartShipping() {
         <div className={styles.media}>
           <img
             src={asset("/promo/ask-twice.svg")}
+            width={880}
+            height={400}
+            loading="lazy"
+            decoding="async"
             alt="Ask twice, pay never: first query hits the live web in 3.6 seconds, the second answers from local cache in milliseconds, the third still answers offline"
           />
         </div>

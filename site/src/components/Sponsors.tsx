@@ -29,6 +29,8 @@ export default function Sponsors() {
                   alt={s.name}
                   width={513}
                   height={80}
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
               <p className={styles.blurb}>{s.description}</p>

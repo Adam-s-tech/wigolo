@@ -12,7 +12,8 @@
     "logos:check": "node scripts/logo-wall/fetch-logos.mjs --check",
     "test": "vitest run && node --test scripts/logo-wall/*.test.mjs scripts/sync-content.test.mjs",
     "predev": "node scripts/sync-content.mjs",
-    "prebuild": "node scripts/sync-content.mjs"
+    "prebuild": "node scripts/sync-content.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "fumadocs-core": "16.15.13",

@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { ALTERNATIVES } from "@/content/alternatives";
 import { source } from "@/lib/source";
 import { SITE_URL } from "@/lib/site";
 
@@ -50,6 +51,10 @@ export function llmsIndex(): string {
     "## Examples",
     "",
     list(examples),
+    "",
+    "## Comparisons",
+    "",
+    ALTERNATIVES.map((a) => `- [wigolo vs ${a.name}](${SITE_URL}/alternatives/${a.slug}/): ${a.description}`).join("\n"),
     "",
     "## Optional",
     "",

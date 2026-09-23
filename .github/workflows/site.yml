@@ -30,6 +30,9 @@ jobs:
       NEXT_PUBLIC_GOATCOUNTER_ENDPOINT: ${{ vars.GOATCOUNTER_ENDPOINT }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: the sitemap's <lastmod> is each page's last commit.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
