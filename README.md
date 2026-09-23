@@ -22,6 +22,9 @@ Local-first web intelligence for AI agents — **no keys, no cloud, no metered b
 <a href="https://trendshift.io/repositories/79424?utm_source=repository-badge&utm_medium=badge&utm_campaign=badge-repository-79424" target="_blank"><img src="https://trendshift.io/api/badge/repositories/79424" alt="wigolo on Trendshift" width="250" height="55"/></a>
 <a href="https://trendshift.io/repositories/79424?utm_source=trendshift-badge&utm_medium=badge&utm_campaign=badge-trendshift-79424" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/79424/daily?language=TypeScript" alt="KnockOutEZ%2Fwigolo | Trendshift" width="250" height="55"/></a>
 
+<sub>sponsored by</sub><br>
+<a href="https://wigolo.app/go/testmu/?ref=readme-top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg"><img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" width="150"></picture></a>
+
 [Quickstart](#quickstart) · [Tools](#tools) · [Why wigolo](#why-its-different) · [Discord](https://discord.gg/BkUUgz2bNF) · [Sponsors](#sponsors) · [Benchmark](#benchmark) · [Docs](docs/README.md) · [Examples](examples/README.md) · [Licensing](LICENSING.md) · [Feedback](#beta--feedback) · [FAQ](#faq)
 
 **Join the community on [Discord](https://discord.gg/BkUUgz2bNF)** — questions, help, and what's being built next.

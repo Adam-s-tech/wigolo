@@ -29,8 +29,9 @@
 
 :root {
   --fd-layout-width: var(--maxw);
-  /* The marketing nav sits above the docs layout; offset sticky chrome by it. */
-  --fd-nav-height: var(--nav-h);
+  /* The sticky marketing nav sits above the docs layout. Fumadocs offsets its
+     sticky sidebar and TOC by the banner height, so declare the nav as one. */
+  --fd-banner-height: var(--nav-h);
 }
 
 .wigolo-docs h1,

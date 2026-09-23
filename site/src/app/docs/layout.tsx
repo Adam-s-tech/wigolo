@@ -3,6 +3,7 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SponsorStrip from "@/components/SponsorStrip";
 import StaticSearchDialog from "@/components/docs/SearchDialog";
 import { source } from "@/lib/source";
 import "./docs.css";
@@ -20,6 +21,7 @@ export default function DocsRootLayout({ children }: { children: ReactNode }) {
         nav={{ title: "Docs", url: "/docs/" }}
         themeSwitch={{ enabled: false }}
         tabs={false}
+        sidebar={{ footer: <SponsorStrip placement="docs" variant="compact" /> }}
         containerProps={{ className: "wigolo-docs" }}
       >
         {children}

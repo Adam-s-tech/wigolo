@@ -49,9 +49,15 @@ time to answer issues from people running wigolo in production.
 
 ### What a sponsor gets
 
-- A logo and a one-line description in the **README sponsors section**.
-- The same placement on the **[project website](https://wigolo.app/)**
-  and on this page.
+- A logo in the **README header**, above the fold on the repository page,
+  plus a logo and one-line description in the README sponsors section.
+- On the **[project website](https://wigolo.app/)**: a "sponsored by" line
+  under the "starred by engineers at" logo wall, a card in the sponsors
+  section, and a line in the footer of every page.
+- A card at the foot of the **[docs](https://wigolo.app/docs/)** sidebar, on
+  every docs page.
+- A credit at the top of **every GitHub release**'s notes.
+- The same placement on this page.
 - A link on every placement, with its reach measured — figures available on
   request, see [Measurement](#measurement) below.
 - Annual sponsors get a commercial license included; see

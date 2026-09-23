@@ -14,10 +14,15 @@
 /** Where a sponsor link was rendered. A closed set — see `normalizePlacement`. */
 export const PLACEMENTS = [
   "readme",
+  "readme-top",
   "site-home",
+  "site-strip",
   "site-footer",
   "sponsors-page",
   "docs",
+  "release",
+  "discord",
+  "x",
 ] as const;
 
 export type Placement = (typeof PLACEMENTS)[number];
@@ -111,3 +116,14 @@ export const sponsorCountPath = (
   slug: string,
   placement: Placement | typeof UNKNOWN_PLACEMENT,
 ): string => `/go/${slug}/${placement}`;
+
+/**
+ * One markdown line thanking every sponsor, prepended to each GitHub Release's
+ * generated notes (see .github/workflows/release.yml). Empty with no sponsors.
+ */
+export const sponsorReleaseLine = (siteUrl: string): string =>
+  SPONSORS.length === 0
+    ? ""
+    : `**Sponsored by** ${SPONSORS.map(
+        (s) => `[${s.name}](${sponsorGoUrl(s.slug, "release", siteUrl)})`,
+      ).join(" · ")} — thank you for keeping wigolo free for everyone.`;

@@ -1,5 +1,6 @@
 import { asset, GH, BASE_PATH, FEEDBACK_LINKS } from "@/lib/site";
 import { ALTERNATIVES } from "@/content/alternatives";
+import SponsorStrip from "./SponsorStrip";
 import styles from "./Footer.module.css";
 
 const COLS: { title: string; links: { label: string; href: string; ext?: boolean }[] }[] = [
@@ -84,6 +85,10 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className={styles.sponsors}>
+          <SponsorStrip placement="site-footer" variant="compact" />
         </div>
 
         <div className={styles.bottom}>

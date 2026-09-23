@@ -11,9 +11,12 @@ import {
   sponsorCountPath,
   sponsorGoPath,
   sponsorGoUrl,
+  sponsorReleaseLine,
   sponsorTargetUrl,
   type Sponsor,
 } from '../../site/src/lib/sponsors';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 const testmu = (): Sponsor => {
   const s = getSponsor('testmu');
@@ -139,5 +142,40 @@ describe('hop URLs', () => {
     const path = sponsorCountPath('testmu', 'readme');
     expect(path).toBe('/go/testmu/readme');
     expect(path).not.toContain('?');
+  });
+});
+
+describe('published sponsor links', () => {
+  it('tag every README and SPONSORS.md hop with a known sponsor and a published placement', () => {
+    // A typo'd ref would pass the redirect but collapse that surface into
+    // "unknown" — its clicks would vanish from the sponsor's report.
+    const hops = ['README.md', 'SPONSORS.md'].flatMap((f) =>
+      [...readFileSync(join(process.cwd(), f), 'utf8').matchAll(/\/go\/([a-z0-9-]+)\/\?ref=([a-z0-9-]+)/g)].map(
+        (m) => ({ file: f, slug: m[1], ref: m[2] }),
+      ),
+    );
+    expect(hops.length).toBeGreaterThan(0);
+    for (const h of hops) {
+      expect(getSponsor(h.slug), `${h.file}: ${h.slug}`).toBeDefined();
+      expect(normalizePlacement(h.ref), `${h.file}: ${h.ref}`).toBe(h.ref);
+    }
+  });
+
+  it('puts the README top strip above the fold, before the first section', () => {
+    // The strip is only worth selling if it sits in the header block, not
+    // below the demo where most visitors never scroll.
+    const readme = readFileSync(join(process.cwd(), 'README.md'), 'utf8');
+    const strip = readme.indexOf('ref=readme-top');
+    expect(strip).toBeGreaterThan(-1);
+    expect(strip).toBeLessThan(readme.indexOf('\n## '));
+  });
+});
+
+describe('sponsorReleaseLine', () => {
+  it('links each sponsor through the hop tagged as a release placement', () => {
+    const line = sponsorReleaseLine('https://wigolo.app');
+    for (const s of SPONSORS) {
+      expect(line).toContain(`[${s.name}](https://wigolo.app/go/${s.slug}/?ref=release)`);
+    }
   });
 });
