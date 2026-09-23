@@ -32,3 +32,9 @@ npm run logos:check    # verify every entry has a logo (CI runs this before buil
 Each entry: `tier` 1 (top row, scrolls left) or 2 (bottom row, scrolls right); `evidence` is `verified` when GitHub attests the link (public org membership, org-owned fork, or a profile email on the company domain) and `self-reported` when it rests on the free-text company field alone; `display` is `icon+name`, `wordmark` (the logo already spells the name) or `name` (text only); `logo.source` is `simple-icons` (inline SVG, preferred), `github-avatar`, `favicon`, `file` (drop a PNG at `.logo-wall/raw-logos/<slug>.png`) or `none`. Rasters are converted to monochrome silhouettes so every logo takes the same treatment. `npm run logos:mine -- --offline` re-ranks the cached pull without calling the API.
 
 Dependencies it adds: `simple-icons` (CC0 brand SVGs, build-time only), `svg-path-bbox` (crops wordmarks to their glyph), and dev-only `pngjs` (raster normalisation) and `vitest` (`npm test`).
+
+## Docs
+
+`/docs` renders the repo's own `docs/*.md` and `examples/*/README.md` — edit those, not anything under `site/`. `scripts/sync-content.mjs` runs before `dev`/`build`: it copies them into the gitignored `content/docs/`, adds frontmatter (title from the page's `# ` heading, description from the index table), orders the sidebar from the `docs/README.md` and `examples/README.md` tables, and rewrites links (doc-to-doc stays on the site, anything else goes to GitHub). The build fails if a page exists without a table row, or the reverse.
+
+Built with Fumadocs (`fumadocs-core`, `fumadocs-ui`, `fumadocs-mdx`) and Tailwind v4 (`tailwindcss`, `@tailwindcss/postcss`), both loaded only on `/docs`. Search is a static index (`/search.json`, fetched on first search). `/llms.txt` and `/llms-full.txt` are generated from the same pages, led by `src/content/llms-preamble.md`.

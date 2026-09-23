@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { asset, GH, BASE_PATH } from "@/lib/site";
 import styles from "./Nav.module.css";
 
-const EXAMPLES_URL = `${GH}/tree/main/examples`;
-
 const LINKS: { label: string; href: string; ext?: boolean }[] = [
-  { label: "Tools", href: "#tools" },
-  { label: "Parity", href: "#parity" },
-  { label: "Docs", href: `${BASE_PATH}/docs` },
-  { label: "Examples", href: EXAMPLES_URL, ext: true },
-  { label: "Quickstart", href: "#quickstart" },
-  { label: "Feedback", href: "#feedback" },
+  // Root-relative anchors: the nav also renders on /docs, where a bare
+  // "#tools" would point at a section that page doesn't have.
+  { label: "Tools", href: `${BASE_PATH}/#tools` },
+  { label: "Parity", href: `${BASE_PATH}/#parity` },
+  { label: "Docs", href: `${BASE_PATH}/docs/` },
+  { label: "Examples", href: `${BASE_PATH}/docs/examples/` },
+  { label: "Quickstart", href: `${BASE_PATH}/#quickstart` },
+  { label: "Feedback", href: `${BASE_PATH}/#feedback` },
 ];
 
 export default function Nav() {
