@@ -1,6 +1,5 @@
 import { asset, GH, BASE_PATH, FEEDBACK_LINKS } from "@/lib/site";
 import { ALTERNATIVES } from "@/content/alternatives";
-import SponsorStrip from "./SponsorStrip";
 import styles from "./Footer.module.css";
 
 const COLS: { title: string; links: { label: string; href: string; ext?: boolean }[] }[] = [
@@ -38,7 +37,7 @@ const COLS: { title: string; links: { label: string; href: string; ext?: boolean
     links: [
       { label: "Star on GitHub", href: GH, ext: true },
       { label: "Sponsors", href: `${BASE_PATH}/#sponsors` },
-      { label: "Sponsor wigolo", href: `${GH}/blob/main/SPONSORS.md`, ext: true },
+      { label: "Sponsor wigolo", href: `${BASE_PATH}/sponsors/` },
       { label: "Buy me a coffee", href: "https://buymeacoffee.com/knockoutez", ext: true },
       { label: "Email the maintainer", href: "mailto:ktowhid20@gmail.com" },
     ],
@@ -86,10 +85,6 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className={styles.sponsors}>
-          <SponsorStrip placement="site-footer" variant="compact" />
         </div>
 
         <div className={styles.bottom}>

@@ -16,6 +16,7 @@ function repoFile(slugs: string[]): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/`, lastModified: lastModified("site/src"), priority: 1 },
+    { url: `${SITE_URL}/sponsors/`, lastModified: lastModified("site/src/app/sponsors", "site/src/lib/sponsors.ts"), priority: 0.5 },
     { url: `${SITE_URL}/alternatives/`, lastModified: lastModified("site/src/content/alternatives.ts"), priority: 0.8 },
     ...ALTERNATIVES.map((a) => ({
       url: `${SITE_URL}/alternatives/${a.slug}/`,

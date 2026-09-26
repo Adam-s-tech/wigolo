@@ -16,7 +16,6 @@ export const PLACEMENTS = [
   "readme",
   "readme-top",
   "site-home",
-  "site-strip",
   "site-footer",
   "sponsors-page",
   "docs",

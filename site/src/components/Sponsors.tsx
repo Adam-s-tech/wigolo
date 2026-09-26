@@ -1,4 +1,4 @@
-import { asset } from "@/lib/site";
+import { asset, BASE_PATH } from "@/lib/site";
 import { SPONSORS, sponsorGoPath } from "@/lib/sponsors";
 import styles from "./Sponsors.module.css";
 
@@ -43,15 +43,22 @@ export default function Sponsors() {
               </a>
             </li>
           ))}
+          <li className={`${styles.card} ${styles.open}`}>
+            <a className={styles.openLink} href={`${BASE_PATH}/sponsors/`} data-track="sponsor_pitch_click" data-track-location="home">
+              <span className={styles.openMark} aria-hidden="true">+</span>
+              <span className={styles.openTitle}>Your logo here</span>
+              <span className={styles.blurb}>
+                On the README, this page, the docs and every release — with the reach measured and shared.
+              </span>
+              <span className={styles.cta}>Sponsor wigolo →</span>
+            </a>
+          </li>
         </ul>
 
         <p className={styles.pitch}>
-          <strong>Want to support wigolo?</strong>{" "}
-          Sponsorship keeps a free-forever project maintained, and there&rsquo;s room for more
-          companies and individuals alongside the sponsors above. If that
-          sounds like you, write to{" "}
-          <a href="mailto:ktowhid20@gmail.com">ktowhid20@gmail.com</a> — it goes
-          straight to the developer who wrote the code.
+          <strong>Want to support wigolo?</strong> Sponsorship keeps a free-forever project maintained.{" "}
+          <a href={`${BASE_PATH}/sponsors/`}>See what it includes</a> or write to{" "}
+          <a href="mailto:ktowhid20@gmail.com">ktowhid20@gmail.com</a>.
         </p>
       </div>
     </section>

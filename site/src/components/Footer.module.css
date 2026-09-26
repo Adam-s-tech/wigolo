@@ -8,9 +8,6 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 32px;
 }
-.sponsors {
-  margin-top: 48px;
-}
 .colTitle {
   font-family: var(--font-mono);
   font-size: 13px;
