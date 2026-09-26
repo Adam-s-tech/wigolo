@@ -25,7 +25,7 @@ const SHARE_URL = process.env.NEXT_PUBLIC_UMAMI_SHARE_URL ?? "";
 const PLACEMENTS = [
   ["README header", "a logo above the fold on the GitHub repository page, where most visitors land."],
   ["README sponsors section", "logo and a one-line description."],
-  ["Website", "a card in the sponsors section of the homepage."],
+  ["Website", "a \"sponsored by\" line near the top of the homepage, under the logo wall, and a card in its sponsors section."],
   ["Docs", "a card at the foot of the sidebar, on every docs page."],
   ["Releases", "a credit at the top of every GitHub release's notes."],
   ["SPONSORS.md", "the same card and description."],

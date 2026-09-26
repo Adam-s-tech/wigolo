@@ -51,8 +51,9 @@ time to answer issues from people running wigolo in production.
 
 - A logo in the **README header**, above the fold on the repository page,
   plus a logo and one-line description in the README sponsors section.
-- A card in the sponsors section of the **[project website](https://wigolo.app/)**
-  homepage, and on the [sponsor page](https://wigolo.app/sponsors/).
+- On the **[project website](https://wigolo.app/)** homepage: a "sponsored by"
+  line under the logo wall near the top, and a card in the sponsors section.
+  Also on the [sponsor page](https://wigolo.app/sponsors/).
 - A card at the foot of the **[docs](https://wigolo.app/docs/)** sidebar, on
   every docs page.
 - A credit at the top of **every GitHub release**'s notes.
