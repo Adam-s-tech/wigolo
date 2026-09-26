@@ -29,6 +29,7 @@ const COLS: { title: string; links: { label: string; href: string; ext?: boolean
       { label: "Examples", href: `${BASE_PATH}/docs/examples/` },
       { label: "Changelog", href: `${GH}/releases`, ext: true },
       { label: "Contributing", href: `${GH}/blob/main/CONTRIBUTING.md`, ext: true },
+      { label: "Adopters", href: `${GH}/blob/main/ADOPTERS.md`, ext: true },
       { label: "Report a bug", href: FEEDBACK_LINKS.bug, ext: true },
     ],
   },

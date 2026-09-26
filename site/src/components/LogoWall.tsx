@@ -75,7 +75,17 @@ export default async function LogoWall() {
 
       <p className={styles.note}>
         From public GitHub profiles of people who starred or forked wigolo. Logos are trademarks of
-        their owners; a listing is not an endorsement.
+        their owners; a listing is not an endorsement.{" "}
+        <a
+          className={styles.noteLink}
+          href="https://github.com/KnockOutEZ/wigolo/issues/new?template=adopter.yml"
+          target="_blank"
+          rel="noreferrer"
+          data-track="adopter_click"
+          data-track-location="logo-wall"
+        >
+          Using wigolo at work? Get listed →
+        </a>
       </p>
     </section>
   );

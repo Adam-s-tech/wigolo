@@ -77,28 +77,6 @@
     }
   },
   {
-    "name": "OpenAI",
-    "slug": "openai",
-    "tier": 1,
-    "evidence": "self-reported",
-    "display": "icon+name",
-    "logo": {
-      "source": "github-avatar",
-      "org": "openai"
-    }
-  },
-  {
-    "name": "Anthropic",
-    "slug": "anthropic",
-    "tier": 1,
-    "evidence": "self-reported",
-    "display": "icon+name",
-    "logo": {
-      "source": "simple-icons",
-      "id": "anthropic"
-    }
-  },
-  {
     "name": "Apache",
     "slug": "apache",
     "tier": 1,
@@ -129,28 +107,6 @@
     "logo": {
       "source": "simple-icons",
       "id": "samsung"
-    }
-  },
-  {
-    "name": "Tesla",
-    "slug": "tesla",
-    "tier": 1,
-    "evidence": "self-reported",
-    "display": "icon+name",
-    "logo": {
-      "source": "simple-icons",
-      "id": "tesla"
-    }
-  },
-  {
-    "name": "SpaceX",
-    "slug": "spacex",
-    "tier": 1,
-    "evidence": "self-reported",
-    "display": "wordmark",
-    "logo": {
-      "source": "simple-icons",
-      "id": "spacex"
     }
   },
   {

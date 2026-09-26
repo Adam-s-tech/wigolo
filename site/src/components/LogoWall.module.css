@@ -24,6 +24,15 @@
   padding-inline: var(--pad-x);
 }
 
+.noteLink {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.noteLink:hover {
+  color: var(--ink);
+}
 .srOnly {
   position: absolute;
   width: 1px;
