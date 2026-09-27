@@ -92,7 +92,7 @@ export default async function SponsorsPage() {
               with the placement it came from, then forwards with a <code>utm_content</code>{" "}
               tag — so
               clicks from the README, the docs and releases show up separately in your analytics and in
-              ours. The site&apos;s analytics are cookieless and store nothing about individual visitors.
+              ours. The site&apos;s analytics are anonymous and cookieless.
               Figures are shared on request.
             </p>
           </section>

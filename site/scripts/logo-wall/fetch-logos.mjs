@@ -92,7 +92,13 @@ for (const c of companies) {
       problems.push(`${c.name}: unknown logo source "${c.logo.source}"`);
       continue;
     }
-    const res = await fetch(url, { redirect: "follow" });
+    let res;
+    try {
+      res = await fetch(url, { redirect: "follow", signal: AbortSignal.timeout(15000) });
+    } catch (e) {
+      problems.push(`${c.name}: ${url} → ${e.message}`);
+      continue;
+    }
     const type = res.headers.get("content-type") ?? "";
     if (!res.ok || !type.startsWith("image/")) {
       problems.push(`${c.name}: ${url} → ${res.status} ${type}`);

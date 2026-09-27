@@ -45,9 +45,9 @@ const sharedRows = (them: Record<string, string> = {}): Row[] =>
     { label: "Account / API key", wigolo: "None", them: "Required" },
     { label: "Cost per query", wigolo: "$0, unlimited", them: "Metered (see pricing below)" },
     {
-      label: "Query data leaves your machine",
-      wigolo: "No — only the requests to the pages themselves",
-      them: "Yes, to the vendor",
+      label: "Where your queries go",
+      wigolo: "Straight to the search engines it queries and the pages it fetches — no vendor in between, no account attached",
+      them: "To the vendor, tied to your account",
     },
     {
       label: "Persistent local memory",
@@ -99,7 +99,7 @@ export const ALTERNATIVES: readonly Alternative[] = [
         "Where it runs": "Their cloud, or self-hosted with Docker Compose",
         "Account / API key": "Required for the hosted API",
         "Cost per query": "Metered on the hosted API (see pricing below)",
-        "Query data leaves your machine": "Yes on the hosted API, to the vendor",
+        "Where your queries go": "To the vendor on the hosted API, tied to your account",
       }),
       {
         label: "Pricing",

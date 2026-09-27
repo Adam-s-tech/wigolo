@@ -42,6 +42,7 @@ async function gql(query, variables, attempt = 1) {
     await new Promise((r) => setTimeout(r, 2000 * attempt));
     return gql(query, variables, attempt + 1);
   }
+  if (!res.ok) throw new Error(`GitHub GraphQL ${res.status}: ${await res.text()}`);
   const body = await res.json();
   if (body.errors?.length) {
     if (attempt < 5) {

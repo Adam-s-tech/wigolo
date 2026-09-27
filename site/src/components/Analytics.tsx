@@ -35,6 +35,7 @@ export default function Analytics() {
       data-website-id={UMAMI_ID}
       data-domains={UMAMI_DOMAINS}
       data-do-not-track="true"
+      data-exclude-search="true"
       strategy="afterInteractive"
     />
   );

@@ -113,10 +113,10 @@ What is measured:
   pageviews, and Google Search Console impressions for the site's pages. README
   impressions can't be counted accurately, because GitHub proxies and caches
   images; repo views are the stand-in, and they're described as exactly that.
-- **What is never collected** — no cookies, no local storage, no personal
-  data, and nothing that identifies an individual visitor. The site uses
-  cookieless analytics (Umami) and honours Do Not Track. The wigolo tool itself
-  sends nothing to the site; this covers the website only.
+- **What is collected** — anonymous page views and events, grouped into
+  sessions without cookies or local storage, with URL query strings left out.
+  The site uses Umami and honours Do Not Track. The wigolo tool itself sends
+  nothing to the site; this covers the website only.
 
 The implementation is in [`site/src/lib/sponsors.ts`](site/src/lib/sponsors.ts),
 [`site/src/lib/analytics.ts`](site/src/lib/analytics.ts) and the interstitial in
