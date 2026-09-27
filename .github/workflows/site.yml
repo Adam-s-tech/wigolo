@@ -24,10 +24,10 @@ jobs:
     env:
       NEXT_PUBLIC_SITE_URL: https://wigolo.app
       NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
-      # Sponsor click counter. A repo *variable*, not a secret — it ships in the
-      # client bundle either way. Leaving it unset is safe: the /go/ hop still
-      # forwards, it just doesn't count. See SPONSORS.md § Measurement.
-      NEXT_PUBLIC_GOATCOUNTER_ENDPOINT: ${{ vars.GOATCOUNTER_ENDPOINT }}
+      # Umami website ID. A repo *variable*, not a secret — it ships in the
+      # client bundle either way. Unset → no analytics tag at all, and the /go/
+      # hop still forwards. See site/README.md § Analytics.
+      NEXT_PUBLIC_UMAMI_ID: ${{ vars.UMAMI_WEBSITE_ID }}
     steps:
       - uses: actions/checkout@v4
         with:

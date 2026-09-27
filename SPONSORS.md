@@ -101,18 +101,21 @@ placement it came from, so each placement can be told apart.
 
 What is measured:
 
-- **Clicks, by placement, over time**, from the project's own counter.
-- **Reach, as a proxy for impressions** — repository traffic and the site's
-  pageviews. README impressions can't be counted accurately, because GitHub
-  proxies and caches images; repo views are the stand-in, and they're described
-  as exactly that.
-- **What is never collected** — no cookies, no third-party tracking script, no
-  local storage, and nothing stored about the individual visitor. The counter
-  records that a click on a placement happened, not who made it.
+- **Clicks, by placement, over time** — each hop records a `sponsor_click`
+  event (sponsor and placement) in the site's analytics.
+- **Reach, as a proxy for impressions** — repository traffic, the site's
+  pageviews, and Google Search Console impressions for the site's pages. README
+  impressions can't be counted accurately, because GitHub proxies and caches
+  images; repo views are the stand-in, and they're described as exactly that.
+- **What is never collected** — no cookies, no local storage, no personal
+  data, and nothing that identifies an individual visitor. The site uses
+  cookieless analytics (Umami) and honours Do Not Track. The wigolo tool itself
+  sends nothing to the site; this covers the website only.
 
-The implementation is in [`site/src/lib/sponsors.ts`](site/src/lib/sponsors.ts)
-and the interstitial in [`site/src/app/go/[slug]/`](site/src/app/go/) — read it
-if you'd like to know exactly what is recorded.
+The implementation is in [`site/src/lib/sponsors.ts`](site/src/lib/sponsors.ts),
+[`site/src/lib/analytics.ts`](site/src/lib/analytics.ts) and the interstitial in
+[`site/src/app/go/[slug]/`](site/src/app/go/) — read it if you'd like to know
+exactly what is recorded.
 
 ## Notes for contributors
 

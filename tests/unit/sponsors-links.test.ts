@@ -8,7 +8,6 @@ import {
   UNKNOWN_PLACEMENT,
   getSponsor,
   normalizePlacement,
-  sponsorCountPath,
   sponsorGoPath,
   sponsorGoUrl,
   sponsorReleaseLine,
@@ -136,13 +135,6 @@ describe('hop URLs', () => {
     );
   });
 
-  it('keeps the counted path free of the query string', () => {
-    // GoatCounter groups by path; leaving `?ref=` in would fragment one
-    // placement across every stray param a visitor arrives with.
-    const path = sponsorCountPath('testmu', 'readme');
-    expect(path).toBe('/go/testmu/readme');
-    expect(path).not.toContain('?');
-  });
 });
 
 describe('published sponsor links', () => {

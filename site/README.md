@@ -38,3 +38,11 @@ Dependencies it adds: `simple-icons` (CC0 brand SVGs, build-time only), `svg-pat
 `/docs` renders the repo's own `docs/*.md` and `examples/*/README.md` — edit those, not anything under `site/`. `scripts/sync-content.mjs` runs before `dev`/`build`: it copies them into the gitignored `content/docs/`, adds frontmatter (title from the page's `# ` heading, description from the index table), orders the sidebar from the `docs/README.md` and `examples/README.md` tables, and rewrites links (doc-to-doc stays on the site, anything else goes to GitHub). The build fails if a page exists without a table row, or the reverse.
 
 Built with Fumadocs (`fumadocs-core`, `fumadocs-ui`, `fumadocs-mdx`) and Tailwind v4 (`tailwindcss`, `@tailwindcss/postcss`), both loaded only on `/docs`. Search is a static index (`/search.json`, fetched on first search). `/llms.txt` and `/llms-full.txt` are generated from the same pages, led by `src/content/llms-preamble.md`.
+
+## Analytics
+
+[Umami](https://umami.is): cookieless, no personal data, no consent banner. Loads only when `NEXT_PUBLIC_UMAMI_ID` is set (the Pages workflow reads the `UMAMI_WEBSITE_ID` repo variable), counts only on `wigolo.app`, and honours Do Not Track. `NEXT_PUBLIC_UMAMI_SRC` points the tag at a self-hosted Umami instead of Umami Cloud. Logic lives in `src/lib/analytics.ts`, the loader in `src/components/Analytics.tsx`.
+
+- **Events:** page views (automatic, including client-side docs navigation); `copy_install`, `cta_click` and `github_click` with a `location` property; `sponsor_click` with `sponsor` and `placement` from every `/go/` hop. Any element gets click tracking with `data-track="<event>"` plus `data-track-<property>` attributes.
+- **Sponsor reporting:** create a share URL in Umami (Website → Share URL) and send it to sponsors; filter events by `sponsor_click` and break down by `placement`.
+- **Search data** (queries, impressions, rankings) comes from Google Search Console, not the site.

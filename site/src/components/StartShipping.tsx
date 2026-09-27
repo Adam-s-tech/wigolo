@@ -22,7 +22,7 @@ export default function StartShipping() {
             search, fetch, crawl, extract, cache, and research, with no API key.
           </p>
           <div className={styles.ctas}>
-            <a href="#quickstart" className="btn btn-primary">
+            <a href="#quickstart" className="btn btn-primary" data-track="cta_click" data-track-location="start-shipping">
               Install in two minutes
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

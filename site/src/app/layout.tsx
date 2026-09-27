@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans, Azeret_Mono } from "next/font/google";
 import { asset, SITE_URL, SOCIAL_IMAGE } from "@/lib/site";
 import { graph, organization, softwareApplication, website } from "@/lib/jsonld";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -89,6 +90,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: jsonLd }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );

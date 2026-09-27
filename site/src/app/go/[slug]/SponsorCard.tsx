@@ -27,7 +27,7 @@ export default function SponsorCard({
         <p className={styles.note}>
           You&rsquo;re being forwarded from a wigolo sponsor link. We count
           clicks on these links to measure how much reach a placement gets — no
-          cookies, no tracking script, nothing stored about you.
+          cookies, nothing stored about you.
         </p>
       </div>
     </main>

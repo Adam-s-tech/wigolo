@@ -111,11 +111,6 @@ export const sponsorGoUrl = (
 ): string =>
   `${siteUrl.replace(/\/$/, "")}${sponsorGoPath(slug, placement)}`;
 
-/** Analytics path for a click, kept stable and free of the query string. */
-export const sponsorCountPath = (
-  slug: string,
-  placement: Placement | typeof UNKNOWN_PLACEMENT,
-): string => `/go/${slug}/${placement}`;
 
 /**
  * One markdown line thanking every sponsor, prepended to each GitHub Release's
