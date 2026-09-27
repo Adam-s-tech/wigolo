@@ -1,5 +1,5 @@
 import { asset } from "@/lib/site";
-import { SPONSORS, sponsorGoPath, type Placement } from "@/lib/sponsors";
+import { SPONSORS, logoHeight, logoWidth, sponsorGoPath, type Placement } from "@/lib/sponsors";
 import styles from "./SponsorStrip.module.css";
 
 /**
@@ -30,8 +30,9 @@ export default function SponsorStrip({
             className={styles.logo}
             src={asset(s.logo.light)}
             alt={s.name}
-            width={141}
-            height={22}
+            width={logoWidth(s, variant === "compact" ? 18 : 22)}
+            height={logoHeight(s, variant === "compact" ? 18 : 22)}
+            style={{ height: logoHeight(s, variant === "compact" ? 18 : 22) }}
             loading="lazy"
             decoding="async"
           />

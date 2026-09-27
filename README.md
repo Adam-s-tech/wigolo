@@ -23,7 +23,7 @@ Local-first web intelligence for AI agents — **no keys, no cloud, no metered b
 <a href="https://trendshift.io/repositories/79424?utm_source=trendshift-badge&utm_medium=badge&utm_campaign=badge-trendshift-79424" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/79424/daily?language=TypeScript" alt="KnockOutEZ%2Fwigolo | Trendshift" width="250" height="55"/></a>
 
 <sub>sponsored by</sub><br>
-<a href="https://wigolo.app/go/testmu/?ref=readme-top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg"><img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" width="150"></picture></a>
+<a href="https://wigolo.app/go/testmu/?ref=readme-top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg"><img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" height="20"></picture></a>
 
 [Quickstart](#quickstart) · [Tools](#tools) · [Why wigolo](#why-its-different) · [Discord](https://discord.gg/BkUUgz2bNF) · [Sponsors](#sponsors) · [Benchmark](#benchmark) · [Docs](docs/README.md) · [Examples](examples/README.md) · [Licensing](LICENSING.md) · [Feedback](#beta--feedback) · [FAQ](#faq)
 
@@ -133,25 +133,6 @@ Here's what one real result looks like, dissected. It includes the failed engine
 </picture>
 
 </div>
-
-## Sponsors
-
-Thank you to the sponsors below, who help keep wigolo maintained and free for everyone to use. Their support goes straight into the work.
-
-<div align="center">
-
-<a href="https://wigolo.app/go/testmu/?ref=readme">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg">
-<img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" width="240">
-</picture>
-</a>
-
-<sub>**[TestMu AI](https://wigolo.app/go/testmu/?ref=readme)** (formerly LambdaTest) is the world's first full-stack agentic AI quality engineering platform, trusted by 18,000+ enterprises.</sub>
-
-</div>
-
-**wigolo is free for everyone.** If you or your company would like to help keep it maintained, there's room for more sponsors — reach out at **[ktowhid20@gmail.com](mailto:ktowhid20@gmail.com)**, or see [SPONSORS.md](SPONSORS.md) for the terms. A one-off via [Buy Me a Coffee](https://buymeacoffee.com/knockoutez) is welcome too.
 
 ## Benchmark
 
@@ -422,6 +403,25 @@ That's the on-device brain: a full browser engine plus the ranking and embedding
 - **Directories** — [Glama](https://glama.ai/mcp/servers/KnockOutEZ/wigolo) · [Smithery](https://smithery.ai/server/ktowhid20/wigolo) · [mcp.so](https://mcp.so/server/wigolo/KnockOutEZ) · [LobeHub](https://lobehub.com/mcp/knockoutez-wigolo)
 
 Homebrew, `curl | sh`, and the single-file binary are covered in the [installation guide](docs/installation.md). Use one channel per machine; they all share `~/.wigolo`.
+
+## Sponsors
+
+Thank you to the sponsors below, who help keep wigolo maintained and free for everyone to use. Their support goes straight into the work.
+
+<div align="center">
+
+<a href="https://wigolo.app/go/testmu/?ref=readme">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/testmu-ai-dark.svg">
+<img alt="TestMu AI" src="assets/sponsors/testmu-ai.svg" height="32">
+</picture>
+</a>
+
+<sub>**[TestMu AI](https://wigolo.app/go/testmu/?ref=readme)** (formerly LambdaTest) is the world's first full-stack agentic AI quality engineering platform, trusted by 18,000+ enterprises.</sub>
+
+</div>
+
+**wigolo is free for everyone.** If you or your company would like to help keep it maintained, there's room for more sponsors — reach out at **[ktowhid20@gmail.com](mailto:ktowhid20@gmail.com)**, or see [what sponsorship includes](https://wigolo.app/sponsors/) and the terms in [SPONSORS.md](SPONSORS.md). A one-off via [Buy Me a Coffee](https://buymeacoffee.com/knockoutez) is welcome too.
 
 ## Contributing
 

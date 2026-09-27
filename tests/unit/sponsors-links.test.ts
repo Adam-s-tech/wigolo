@@ -171,3 +171,31 @@ describe('sponsorReleaseLine', () => {
     }
   });
 });
+
+describe('sponsor logos', () => {
+  // Intrinsic size from the file itself: PNG IHDR, or an SVG's width/height.
+  const sizeOf = (file: string): { width: number; height: number } => {
+    const buf = readFileSync(file);
+    if (buf.subarray(1, 4).toString() === 'PNG') {
+      return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    }
+    const svg = buf.toString('utf8');
+    const w = svg.match(/<svg[^>]*\bwidth="(\d+(?:\.\d+)?)"/);
+    const h = svg.match(/<svg[^>]*\bheight="(\d+(?:\.\d+)?)"/);
+    return { width: Number(w?.[1]), height: Number(h?.[1]) };
+  };
+
+  it('ship both themes in both the README assets and the site, at the declared size', () => {
+    // A missing file is a broken image on GitHub or the site; a wrong size
+    // squashes the logo or shifts the page while it loads.
+    for (const s of SPONSORS) {
+      for (const path of [s.logo.light, s.logo.dark]) {
+        const file = path.replace(/^\/sponsors\//, '');
+        for (const dir of ['assets/sponsors', 'site/public/sponsors']) {
+          const size = sizeOf(join(process.cwd(), dir, file));
+          expect(size.width / size.height, `${dir}/${file}`).toBeCloseTo(s.logo.width / s.logo.height, 2);
+        }
+      }
+    }
+  });
+});

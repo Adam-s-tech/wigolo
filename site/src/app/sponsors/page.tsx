@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import alt from "@/components/alternatives/Alternatives.module.css";
 import { starCount } from "@/lib/logo-wall";
 import { asset, BASE_PATH, GH, SOCIAL_IMAGE } from "@/lib/site";
-import { SPONSORS, sponsorGoPath } from "@/lib/sponsors";
+import { SPONSORS, logoHeight, logoWidth, sponsorGoPath } from "@/lib/sponsors";
 import { compact, npmMonthlyDownloads } from "@/lib/stats";
 import styles from "./sponsors.module.css";
 
@@ -26,7 +26,7 @@ const PLACEMENTS = [
   ["README header", "a logo above the fold on the GitHub repository page, where most visitors land."],
   ["README sponsors section", "logo and a one-line description."],
   ["Website", "a \"sponsored by\" line near the top of the homepage, under the logo wall, and a card in its sponsors section."],
-  ["Docs", "a card at the foot of the sidebar, on every docs page."],
+  ["Docs", "where it fits your product, a labeled setup example in the docs and examples."],
   ["Releases", "a credit at the top of every GitHub release's notes."],
   ["SPONSORS.md", "the same card and description."],
 ];
@@ -125,7 +125,7 @@ export default async function SponsorsPage() {
               {SPONSORS.map((s) => (
                 <div key={s.slug} className={styles.sponsor}>
                   <a href={asset(sponsorGoPath(s.slug, "sponsors-page"))} rel="sponsored noopener" aria-label={s.name}>
-                    <img className={styles.sponsorLogo} src={asset(s.logo.light)} alt={s.name} width={205} height={32} loading="lazy" decoding="async" />
+                    <img className={styles.sponsorLogo} src={asset(s.logo.light)} alt={s.name} width={logoWidth(s, 30)} height={logoHeight(s, 30)} style={{ height: logoHeight(s, 30) }} loading="lazy" decoding="async" />
                   </a>
                   <p className={styles.sponsorText}>{s.description}</p>
                 </div>

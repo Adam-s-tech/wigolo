@@ -68,7 +68,7 @@ Everything lives under the data dir (`WIGOLO_DATA_DIR`, default `~/.wigolo`): th
 
 Be aware of an honest ceiling before you deploy scraping-adjacent workflows to a VPS: anti-bot systems score **IP reputation**, and datacenter ranges start with low scores. Some challenge-protected sites will not clear from a datacenter IP no matter what the client does — the same fetch works fine from a residential connection. wigolo's tiered fetching and per-domain learning ([`wigolo tune`](./cli.md#tune)) get you the reliability that's achievable, and when a page can't be cleared you get a labeled `blocked_by_challenge` failure instead of junk parading as content.
 
-The opt-in workaround for legitimate research that keeps hitting this wall is routing through a proxy whose IP reputation matches your use:
+The opt-in workaround for legitimate research that keeps hitting this wall is routing through a proxy whose IP reputation matches your use. Any HTTP(S) proxy works: turn proxying on and give wigolo the proxy URL.
 
 ```bash
 wigolo config --set useProxy=true
